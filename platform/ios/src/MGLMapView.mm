@@ -4008,7 +4008,7 @@ public:
      // The annotation can’t be selected if no part of it is hittable.
     if ( ! CGRectIntersectsRect(positioningRect, self.bounds) && annotation != self.userLocation)
     {
-        return;
+        [self showAnnotations:@[annotation] animated:YES];
     }
 
     self.selectedAnnotation = annotation;
